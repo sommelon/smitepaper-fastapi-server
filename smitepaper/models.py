@@ -53,7 +53,7 @@ class Wallpaper(Base):
     __tablename__ = "wallpapers"
 
     id = Column(Integer, primary_key=True)
-    name = Column(String(255))
+    title = Column(String(255))
     image_link = Column(String)
     size = Column(String(9))
     slug = Column(String(255))

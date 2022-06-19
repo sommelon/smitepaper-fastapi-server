@@ -1,7 +1,7 @@
 """"Add core models"
 
 Revision ID: baeefa6fe33e
-Revises: 
+Revises:
 Create Date: 2022-06-19 18:04:17.755861
 
 """
@@ -56,7 +56,7 @@ def upgrade() -> None:
     op.create_table(
         "wallpapers",
         sa.Column("id", sa.Integer(), nullable=False),
-        sa.Column("name", sa.String(length=255), nullable=True),
+        sa.Column("title", sa.String(length=255), nullable=True),
         sa.Column("image_link", sa.String(), nullable=True),
         sa.Column("size", sa.String(length=9), nullable=True),
         sa.Column("slug", sa.String(length=255), nullable=True),
