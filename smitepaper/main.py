@@ -1,8 +1,7 @@
 from fastapi import FastAPI
 
-from smitepaper.routers import wallpapers
+from smitepaper.api.wallpapers import wallpaper_router
 
-if __name__ == "__main__":
-    app = FastAPI(docs_url="api/docs", redoc_url="api/redoc")
+app = FastAPI(docs_url="/api/docs", redoc_url="/api/redoc")
 
-    app.include_router(wallpapers)
+app.include_router(wallpaper_router)
