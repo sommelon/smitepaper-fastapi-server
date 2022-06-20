@@ -59,7 +59,7 @@ class Wallpaper(Base):
     slug = Column(String(255))
     release_date = Column(Date)  # TODO: obtain release dates for skins
     tags = relationship(
-        "Tag", secondary="WallpaperTag", cascade="all, delete", backref="wallpapers"
+        "Tag", secondary="wallpaper_tags", cascade="all, delete", backref="wallpapers"
     )
 
 
